@@ -2,14 +2,15 @@ name: Build Otzaria for macOS
 on: [push]
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-12  # משתמש ב-macOS 12 במקום הברירת מחדל
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.3'
+          flutter-version: '3.10.0'  # גרסה ישנה יותר לתאימות
+          architecture: x64  # מבטל x86_64 ישן
       - run: flutter pub get
-      - run: flutter build macos --release
+      - run: flutter build macos --release --no-tree-shake-icons  # מונע בעיות בנייה
       - uses: actions/upload-artifact@v3
         with:
           name: Otzaria-macOS
