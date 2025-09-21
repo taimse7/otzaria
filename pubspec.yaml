@@ -62,19 +62,19 @@ dependencies:
   msix: ^3.16.9
   path_provider: ^2.1.5
   html: ^0.15.1
-  pdfrx: ^1.3.2
+  pdfrx: ^1.3.5
   url_launcher: ^6.3.1
   flutter_widget_from_html: ^0.17.0
   scrollable_positioned_list: ^0.3.8
   search_highlight_text: ^1.0.0+2
   fuzzywuzzy: ^1.1.6
   file_picker: ^10.2.1
-  permission_handler: ^11.3.0
-  flutter_launcher_icons: "^0.13.1"
+  permission_handler: ^12.0.1
+  flutter_launcher_icons: ^0.14.4
   provider: ^6.1.5
   docx_to_text: ^1.0.1
   expandable: ^5.0.1
-  multi_split_view: ^2.4.0
+  multi_split_view: ^3.6.1
   updat: ^1.3.2
   flutter_context_menu:
     git:
@@ -87,7 +87,7 @@ dependencies:
   csv: ^6.0.0
   archive: ^3.6.1
   filter_list: 1.0.3
-  package_info_plus: ^8.0.2
+  package_info_plus: ^9.0.0
   crypto: ^3.0.6
   path: ^1.9.0
   http: ^1.4.0
@@ -114,7 +114,6 @@ dependencies:
 dependency_overrides:
   #  it forces the version of the intl package to be 0.19.0 across all dependencies, even if some packages specify a different compatible version.
   intl: ^0.19.0
-
 flutter_launcher_icons:
   android: true
   ios: true
@@ -197,3 +196,4 @@ flutter:
     - family: NotoSerifHebrew
       fonts:
         - asset: fonts/NotoSerifHebrew-VariableFont_wdth,wght.ttf
+      

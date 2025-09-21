@@ -219,7 +219,7 @@ class EmptyLibraryBloc extends Bloc<EmptyLibraryEvent, EmptyLibraryState> {
               // Create extractor with memory-efficient settings
               final extractor = ZipDecoder();
               final inputStream = InputFileStream(_tempFile!.path);
-              final archive = extractor.decodeBuffer(inputStream);
+              final archive = ZipDecoder().decodeBytes(inputStream.buffer.asUint8List());
               final totalFiles = archive.files.length;
               var extractedFiles = 0;
 
