@@ -1,0 +1,16 @@
+name: Build Otzaria for macOS
+on: [push]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.3'
+      - run: flutter pub get
+      - run: flutter build macos --release
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Otzaria-macOS
+          path: build/macos/Build/Products/Release/Otzaria.app
